@@ -1,8 +1,8 @@
 const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
 const open = require('open')
-const config = require('./config/webpack.' + (process.env.NODE_ENV || 'dev') + '.js')
-console.log(config)
+  // const config = require('./config/webpack.' + (process.env.NODE_ENV || 'dev') + '.js')
+const config = require('./config/webpack.test.js')
 
 // webpack(config, function(err, stats) {
 //     if (err) throw err;

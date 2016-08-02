@@ -14,7 +14,6 @@ let config = Object.assign({}, baseConfig, {
     // 'webpack/hot/only-dev-server',
     './app/index.js'
   ],
-  cache: true,
   devtool: 'eval',
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

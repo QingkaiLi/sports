@@ -1,15 +1,24 @@
 'use strict'
-const path = require('path')
-const srcPath = path.join(__dirname, '../app')
-const dfltPort = 8000
+let path = require('path')
 
-function getDefaultModules() {
-  return {
-    // preLoaders: [{
-    //   test: /\.(js|jsx)$/,
-    //   include: srcPath,
-    //   loader: 'eslint-loader'
-    // }],
+module.exports = {
+  port: 8082,
+  devtool: 'eval',
+  entry: [
+    // 'webpack-dev-server/client?http://127.0.0.1:' + defaultSettings.port,
+    // 'webpack/hot/only-dev-server',
+    './app/index.js'
+  ],
+  output: {
+    path: path.join(__dirname, '../dist/assets'),
+    filename: 'app.js',
+    publicPath: '/dist/assets'
+  },
+  devServer: {
+    contentBase: './',
+    port: 8082
+  },
+  module: {
     loaders: [{
       test: /\.css$/,
       loader: 'style-loader!css-loader!postcss-loader'
@@ -28,20 +37,6 @@ function getDefaultModules() {
     }, {
       test: /\.(png|jpg|gif|woff|woff2)$/,
       loader: 'url-loader?limit=8192'
-    }
-    // , {
-    //   test: /\.(mp4|ogg|svg)$/,
-    //   loader: 'file-loader'
-    // }
-    ]
-  }
-}
-module.exports = {
-  srcPath: srcPath,
-  publicPath: '/assetss/',
-  port: dfltPort,
-  getDefaultModules: getDefaultModules,
-  postcss: function() {
-    return []
+    }]
   }
 }
