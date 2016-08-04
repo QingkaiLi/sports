@@ -7,10 +7,6 @@ module.exports = {
     filename: 'app.js',
     publicPath: '/dist/'
   },
-  devServer: {
-    contentBase: 'app',
-    port: 8081
-  },
   module: {
     loaders: [{
       test: /\.jsx?$/,

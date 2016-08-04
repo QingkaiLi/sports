@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "start": "webpack-dev-server --progress --inline",
-    "deploy": "webpack"
+    "dev": "webpack-dev-server --config config/webpack.config.dev.js --inline --hot",
+    "deploy": "rm -rf dist && webpack --config config/webpack.config.deploy.js && cp app/index.html dist/index.html"
   },
   "repository": {
     "type": "git",
