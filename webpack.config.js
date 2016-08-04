@@ -1,9 +1,15 @@
 module.exports = {
-  entry: { app: "./app/js/entry.js", },
+  entry: [
+    './app/js/entry.js'
+  ],
   output: {
     path: 'dist',
-    filename: '[name].js',
+    filename: 'app.js',
     publicPath: '/dist/'
+  },
+  devServer: {
+    contentBase: 'app',
+    port: 8081
   },
   module: {
     loaders: [{
@@ -23,5 +29,6 @@ module.exports = {
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
-  }
-};
+  },
+  plugin: []
+}
