@@ -30,7 +30,7 @@
     "bower-webpack-plugin": "^0.1.9",
     "css-loader": "^0.23.1",
     "file-loader": "^0.9.0",
-    "less": "^2.7.1",
+    "less": "^3.0.2",
     "less-loader": "^2.2.3",
     "normalize.css": "^4.2.0",
     "path": "^0.12.7",
